@@ -32,11 +32,12 @@ vector<int>printDivisors(int n)
         if(n % i == 0)
         {
             ans.push_back(i);
+            if(n/i != i)
+            {
+                ans.push_back(n / i);
+            }
         }
-        if(n/i != i)
-        {
-            ans.push_back(n / i);
-        }
+        
     }
     sort(ans.begin(),ans.end());
     return ans;
